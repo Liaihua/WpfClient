@@ -11,13 +11,20 @@
             <TabItem Name="DepartmentsAndUsersTab" Header="Отделения и пользователи">
                 <Grid>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition x:Name="DepartmentsList">
+                        <ColumnDefinition x:Name="DepartmentsColumn">
 
                         </ColumnDefinition>
-                        <ColumnDefinition x:Name="UsersList">
+                        <ColumnDefinition x:Name="UsersColumn">
 
                         </ColumnDefinition>
                     </Grid.ColumnDefinitions>
+                <ListView x:Name="DepartmentsList" ItemsSource="{Binding Departments}" Grid.Column="0">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Header="Отделение"></GridViewColumn>
+                            </GridView>
+                        </ListView.View>
+                </ListView>
                 </Grid>
             </TabItem>
             <TabItem Name="AddDepartmentTab" Header="Добавить отделение">

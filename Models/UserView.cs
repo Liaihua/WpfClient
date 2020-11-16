@@ -11,7 +11,7 @@ namespace WpfClient.Models
         public string Fname { get; set; }
         public string Sname { get; set; }
 
-        public static implicit operator UserView(WpfClient.Models.Users target)
+        public static implicit operator UserView(Users target)
         {
             if (target == null)
                 return new UserView();
